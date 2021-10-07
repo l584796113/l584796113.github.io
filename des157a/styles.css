@@ -1,13 +1,25 @@
 body{
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+h2{
+    font-size: 24px;
 }
 li{
     list-style-type: none;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
 ul{
     margin:0;
     padding:0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: blue;
 }
 #container{
     justify-content: center;
@@ -19,6 +31,10 @@ ul{
     display: flex;
     flex-wrap: wrap; 
     
+}
+#banner{
+    background-image: url("BANNERFinal.png");
+    background-size: contain;
 }
 h1{
     margin: 0;
@@ -45,75 +61,47 @@ main{
     height: 250px;
 }
 section{
-    border: double;
-    width: 30%;
-    height: 100%;
+    background-image: url("frame.png");
+    background-size: cover;
+    width: 400px;
+    height: 500px;
 }
 
-#L{
-    position: relative ;
-    top:-255px;
-    left:2px;
-    
-}
-#L:hover{
-    transform: perspective(1000px) rotateY(2205deg);
-    transition: all 5s ease-out;
-}
+
+
 .letters{
-    transform: scale(0.17);
+    transform: scale(0.23);
     position: relative ;
 }
 #L{
     position: relative ;
-    top:-700px;
-    left:-362px;
-    animation: animation3 3s ease-in-out infinite alternate;
+    top:-274px;
+    left:-364px;
+    animation: animation3 6s ease-in-out 0s infinite alternate;
 }
 #O{
-    top:-1843px;
-    left:-180px;
-    animation: animation3 3s linear infinite alternate;
+    top:-1073px;
+    left:-182px;
+    animation: animation3 6s ease-in-out 0.2s infinite alternate;
 }
 #U{
-    top:-2990px;
-    animation: animation3 3s linear infinite alternate;
-
+    top:-1878px;
+    left: -2px;
+    animation: animation3 6s ease-in-out 0.4s infinite alternate;
 }
 
 #I{
-    top: -4134px;
-    left:182px;
-    animation: animation3 3s linear infinite alternate;
+    top: -2683px;
+    left:180px;
+    animation: animation3 6s ease-in-out 0.8s infinite alternate;
 }
 #S{
-    top: -5279px;
-    left:362px;
-    animation: animation3 3s ease-in-out infinite alternate;
+    top: -3480px;
+    left:360px;
+    animation: animation3 6s ease-in-out 1s infinite alternate;
 }
-#LH:hover{
-    transform: scale(2);
-    transition: all 2s;
-    
-}
-#OH:hover{
-    transform: scale(2);
-    transition: all 2s;
-    
-}
-#UH:hover{
-    transform: scale(2);
-    transition: all 2s;
-    
-}
-#IH:hover{
-    transform: scale(2);
-    transition: all 2s;
-    
-}
-#SH:hover{
-    transform: scale(2);
-    transition: all 2s;
+#banner:hover{
+    animation: bannerbackground 8s linear infinite alternate;
     
 }
 
@@ -121,26 +109,36 @@ footer a{
     margin-right: 12px;
 }
 
-
+@keyframes bannerbackground{
+    0%{
+        background-image: url("BANNERFinal.png");
+    }
+    33%{
+        background-image: url("BANNERFinal2.png");
+    }
+    66%{
+        background-image: url("BANNERFinal3.png");
+    }
+}
 @keyframes animation3{
     0%{
-        transform: scale(0.17) rotateY(0deg);
+        transform: scale(0.23) rotateY(0deg);
     
     } 
     25%{
-        transform: scale(0.17) rotateY(90deg) ;
+        transform: scale(0.23) rotateY(90deg) ;
         
     } 
     50%{
-        transform: scale(0.17) rotateY(180deg);
+        transform: scale(0.23) rotateY(180deg);
         
     } 
     75%{
-        transform: scale(0.17) rotateY(270deg)  ;
+        transform: scale(0.23) rotateY(270deg)  ;
        
     } 
     100%{
-        transform: scale(0.17) rotateY(360deg)  ;
+        transform: scale(0.23) rotateY(360deg)  ;
         
     } 
 }
