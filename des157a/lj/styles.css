@@ -56,7 +56,10 @@ footer{
     border-left: none;
     border-right: none;
     font-weight: 400;
+    display: flex;
+    justify-content: space-evenly;
 }
+
 
 
 
