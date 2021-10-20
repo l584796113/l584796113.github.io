@@ -1,4 +1,5 @@
 
+
 body{
     text-align: center;
     width: 500px;
@@ -6,14 +7,14 @@ body{
     border: 3px solid;
     border-top: none;
     border-bottom:none ;
-    padding-top: 23px;
+    padding-top: 15px;
     font-family: 'Lato', sans-serif;
-
-    
+    height: 100%;
 }
 
 h1{
     margin-top: 0;
+    margin-bottom: 0;
     padding: 5px;
     border: 10px double white;
     border-left: none;
@@ -29,6 +30,7 @@ article{
     text-align: justify;
     padding-top: 20px;
     padding-bottom: 20px;
+    min-height: 550px;
 }
 h2,h3{
     text-align: center;
@@ -58,8 +60,38 @@ footer{
     font-weight: 400;
     display: flex;
     justify-content: space-evenly;
+    
 }
 
+nav{
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    display: flex;
+    line-height: 0px;
+    position: relative;
+}
 
+nav ul{
+    padding: 0;
+    display: flex;
+    list-style:disc;
+    width: 100%;
+    justify-content:left;
+    position: absolute;
+    top: -10px;
+}
+nav ul li{
+    text-decoration: none;
+    padding:0;
+    margin-left: 30px;
+}
 
-
+nav ul li a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-weight: 600;
+    font-size: small;
+}
