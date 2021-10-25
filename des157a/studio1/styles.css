@@ -1,0 +1,73 @@
+html{
+    font-family: 'Irish Grover', cursive;
+}
+body{
+    background-image: url("base.png");
+    background-size:1000px;
+    background-position-x: center;
+    background-position-y: 20px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+h1{
+    color: white;
+    font-size: 60px;
+}
+header{
+    text-align: center;
+    margin-top: 250px;
+    left: 450px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#myForm{
+    position:absolute;
+    width: 200px;
+    left: 9999px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+#myForm input{
+    margin: 6px;
+    border-radius: 20px;
+    border: white solid ;
+}
+
+#start{
+
+    border-radius: 30px;
+    border-width: 2px;
+    background: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Irish Grover', cursive;
+    font-size: 24px;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#submit{
+    border-color: white;
+    background: none;
+    border-radius: 30px;
+    border-style: solid;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Irish Grover', cursive;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+

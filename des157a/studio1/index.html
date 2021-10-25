@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build Mad Lib Script</title>
     <script src="script.js" defer></script>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Build a Mad Lib Script</h1>
+        <h1>Welcome to Mad Libs</h1>
     </header>
     <main>
         <form id="myForm">
@@ -25,8 +27,10 @@
             <label for="verb">Provide a Verb</label>
             <input  type="text" id="verb" required>
 
-            <input  type="submit" id="Send" required>
+            <input  type="submit" id="submit" required>
         </form>
+        
+        <button id="start" type="button">START</button>
 
         <article id="madlib"></article>
     </main>
