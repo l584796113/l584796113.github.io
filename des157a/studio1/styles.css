@@ -8,6 +8,7 @@ body{
     background-position-y: 20px;
     background-repeat: no-repeat;
     position: relative;
+
 }
 h1{
     color: white;
@@ -69,5 +70,15 @@ main{
     padding-bottom: 5px;
 }
 
+footer{
+    position: absolute;
+    text-align: center;
+    left: 590px;
+    bottom: -220px;
+    color: white;
+}
+footer a{
+    color: white;
+}
 
 
