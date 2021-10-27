@@ -2,7 +2,6 @@ html{
     font-family: 'Irish Grover', cursive;
 }
 body{
-    background-image: url("base.png");
     background-size:1000px;
     background-position-x: center;
     background-position-y: 20px;
@@ -11,12 +10,14 @@ body{
 
 }
 h1{
+
     color: white;
     font-size: 60px;
 }
 header{
     text-align: center;
-    margin-top: 250px;
+    margin-top: 160px;
+    padding-top: 80px;
     left: 450px;
 }
 
@@ -41,7 +42,8 @@ main{
 }
 
 #start{
-
+    position: absolute;
+    left: 9990px;
     border-radius: 30px;
     border-width: 2px;
     background: none;
