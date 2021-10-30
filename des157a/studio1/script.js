@@ -29,15 +29,24 @@
     let myText="";
     let myText2="";
 
-    let printWords = function (text,index, interval) {  
-        if (index < text.length) {
-          madLib.append(text[index++]);
-          
-        }// }else{
-        //     madLib.innerHTML="";
-        //     setTimeout(function () { printWords(myText2, index, interval); }, interval);
-        // }
-      }
+    let printWords = function (index, interval) {  
+        if (index < myText.length) {
+          madLib.append(myText[index++]);
+          setTimeout(function () { printWords(index, interval); }, interval);
+        }else{
+             
+             setTimeout(function () { madLib.innerHTML=""; printWords2(0, 70); }, 1000);
+        }
+    }
+      
+
+    let printWords2 = function (index, interval) {  
+        if (index < myText2.length) {
+          madLib.append(myText2[index++]);
+          setTimeout(function () { printWords2(index, interval); }, interval);
+        }
+    }
+      
 
     myForm.addEventListener('submit',function(event){
         event.preventDefault();
@@ -53,8 +62,7 @@
         if(name && car && friend && place && job){
             myText=`It was an ordinary day. You were sitting in the yard after dinner, thinking that one day, you will drive your dream car traveling at the place you wanna go the most. All of a sudden, 
             a meteor flashed by. You believe it very much. So, you closed your eyes and made a wish about your dream. Then you went to bed.`
-            myText2=`When you got up the next day, the miracle happened. Y
-            you were not on your bed. Instead, it’s a place you don’t recognize. As you walked out of the house, someone drove a <u>${car}</u> and stopped in front of you. He gave the key to you and said “Enjoy Your Car, Boss ”. It’s your dream car and the key was in your hand. You were so confused and started to ask others where you are. People told you that you were in <u>${place}</u>.  Then you started to realize that it is all about your dream. The wishes became reality. At that moment, someone, whose sound was so familiar, called your name from behind. You turned around and saw <u>${friend}</u>. He/she was your best friend and told you that everything is real. You still couldn’t believe it, but you actually felt a bit excited. As you were trying to get into the car, you received a call. You picked it up and he called you boss. But, you didn’t know what’s going on so you told him that you are busy and will call back. Trying to figure out who you are right now, you open up your wallet and see your business card. What’s printed on it is “<u>${name}</u>” and it also indicates your success at <u>${job}</u>. All of your dreams have come true. 
+            myText2=`When you got up the next day, the miracle happened. You were not on your bed. Instead, it’s a place you don’t recognize. As you walked out of the house, someone drove a <${car}> and stopped in front of you. He gave the key to you and said “Enjoy Your Car, Boss ”. It’s your dream car and the key was in your hand. You were so confused and started to ask others where you are. People told you that you were in <${place}>.  Then you started to realize that it is all about your dream. The wishes became reality. At that moment, someone, whose sound was so familiar, called your name from behind. You turned around and saw <${friend}>. He/she was your best friend and told you that everything is real. You still couldn’t believe it, but you actually felt a bit excited. As you were trying to get into the car, you received a call. You picked it up and he called you boss. But, you didn’t know what’s going on so you told him that you are busy and will call back. Trying to figure out who you are right now, you open up your wallet and see your business card. What’s printed on it is “<${name}>” and it also indicates your success at <${job}>. All of your dreams have come true. 
             `;
         }else{
             myText="Please fill the empty fields.";
@@ -81,7 +89,7 @@
         //     }, 2500);
 
         // }
-        printWords(myText, 0, 70);
+        printWords(0, 70);
 
 
         const datas=document.querySelectorAll("input[type=text]");
