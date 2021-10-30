@@ -77,7 +77,8 @@
         setTimeout(() => { 
             h1.innerHTML="Your Story";
             madLib.style.display="block";
-        }, 1000);
+            printWords(0, 70);
+        }, 1500);
 
         // let words = myText.split(" ");
         // let i =0;
@@ -89,7 +90,7 @@
         //     }, 2500);
 
         // }
-        printWords(0, 70);
+        
 
 
         const datas=document.querySelectorAll("input[type=text]");

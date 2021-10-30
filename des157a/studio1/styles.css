@@ -73,8 +73,8 @@ main{
     font-size: 18px;
     padding-top: 5px;
     padding-bottom: 5px;
+    text-transform: capitalize;
 }
-
 footer{
     margin-top: 160px;
     text-align: center;
