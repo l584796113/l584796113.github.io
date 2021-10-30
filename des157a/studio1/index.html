@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build Mad Lib Script</title>
-    <script src="script.js" defer></script>
-    <link href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Build Mad Lib Script</title>
+    
 </head>
 <body>
     <header>
@@ -15,17 +16,26 @@
     </header>
     <main>
         <form id="myForm">
-            <label for="noun1">Provide a Noun</label>
-            <input  type="text" id="noun1" required>
+            <label for="car">Your Dream Car</label>
+            <select name="cars" id="cars">
+                <option value="lambo">Lamboghni</option>
+                <option value="challenger">Dodge Challenger</option>
+                <option value="r8">Audi R8</option>
+              </select>
 
-            <label for="noun2">Provide another Noun</label>
-            <input  type="text" id="noun2" required>
+            <label for="name">Your Name</label>
+            <input  type="text" id="name" required>
 
-            <label for="adj">Provide a Adjective</label>
-            <input  type="text" id="adj" required>
+            <label for="job">Your Dream Job</label>
+            <input  type="text" id="job" required>
 
-            <label for="verb">Provide a Verb</label>
-            <input  type="text" id="verb" required>
+            <label for="friend">Your Best Friend</label>
+            <input  type="text" id="friend" required>
+
+            <label for="place">Place You Want To Travel</label>
+            <input  type="text" id="place" required>
+
+            
 
             <input  type="submit" id="submit" required>
         </form>

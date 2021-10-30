@@ -17,40 +17,72 @@
         event.preventDefault();
         h1.innerHTML="Enter Your Words";
         header.style.paddingTop="0px"
-        myForm.style.left="auto";
-        submit2.style.left="9999px";
-        footer.style.bottom="-999px";
+        myForm.style.display="block";
+        submit2.style.display="none";
+        footer.style.display="none";
 
     });
 
 
     let myForm=document.querySelector('#myForm');
     let madLib=document.querySelector('#madlib');
+    let myText="";
+    let myText2="";
+
+    let printWords = function (text,index, interval) {  
+        if (index < text.length) {
+          madLib.append(text[index++]);
+          
+        }// }else{
+        //     madLib.innerHTML="";
+        //     setTimeout(function () { printWords(myText2, index, interval); }, interval);
+        // }
+      }
+
     myForm.addEventListener('submit',function(event){
         event.preventDefault();
-        let noun1 = document.querySelector('#noun1').value;   
-        let noun2 = document.querySelector('#noun2').value;   
-        let adj = document.querySelector('#adj').value;   
-        let verb = document.querySelector('#verb').value;  
-        let myText="";
+        let name = document.querySelector('#name').value;   
+        let car = document.querySelector('#cars').value;   
+        let friend = document.querySelector('#friend').value;   
+        let place = document.querySelector('#place').value;  
+        let job = document.querySelector('#job').value;  
         
-        myForm.style.left="9999px";
+        myForm.style.display="none";
         h1.innerHTML="";
  
-        if(noun1 && noun2 && adj && verb){
-            myText=`<u>${noun1}</u> is about to <u>${verb}</u> <u>${noun2}</u>, because <u>${noun2}</u> is <u>${adj}</u>.`;
+        if(name && car && friend && place && job){
+            myText=`It was an ordinary day. You were sitting in the yard after dinner, thinking that one day, you will drive your dream car traveling at the place you wanna go the most. All of a sudden, 
+            a meteor flashed by. You believe it very much. So, you closed your eyes and made a wish about your dream. Then you went to bed.`
+            myText2=`When you got up the next day, the miracle happened. Y
+            you were not on your bed. Instead, it’s a place you don’t recognize. As you walked out of the house, someone drove a <u>${car}</u> and stopped in front of you. He gave the key to you and said “Enjoy Your Car, Boss ”. It’s your dream car and the key was in your hand. You were so confused and started to ask others where you are. People told you that you were in <u>${place}</u>.  Then you started to realize that it is all about your dream. The wishes became reality. At that moment, someone, whose sound was so familiar, called your name from behind. You turned around and saw <u>${friend}</u>. He/she was your best friend and told you that everything is real. You still couldn’t believe it, but you actually felt a bit excited. As you were trying to get into the car, you received a call. You picked it up and he called you boss. But, you didn’t know what’s going on so you told him that you are busy and will call back. Trying to figure out who you are right now, you open up your wallet and see your business card. What’s printed on it is “<u>${name}</u>” and it also indicates your success at <u>${job}</u>. All of your dreams have come true. 
+            `;
         }else{
             myText="Please fill the empty fields.";
         }
-        body.style.backgroundImage="url('animated.gif')";
+
+        switch(car){
+            case "lambo": body.style.backgroundImage="url('lambo.gif')"; break;
+            case "r8": body.style.backgroundImage="url('audi.gif')"; break;
+            default: body.style.backgroundImage="url('challenger.gif')"; break;
+
+        }
         setTimeout(() => { 
-            madLib.innerHTML= myText; 
             h1.innerHTML="Your Story";
-        }, 1500);
-        
-        madLib.style.color="white";
-        madLib.style.fontSize="18px";
-        madLib.style.fontSize
+            madLib.style.display="block";
+        }, 1000);
+
+        // let words = myText.split(" ");
+        // let i =0;
+        // if(i < words.length)
+        // {   
+        //     setTimeout(() => { 
+        //         madLib.append(words[i] + " ");
+        //         i++;
+        //     }, 2500);
+
+        // }
+        printWords(myText, 0, 70);
+
 
         const datas=document.querySelectorAll("input[type=text]");
 

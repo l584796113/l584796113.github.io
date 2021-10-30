@@ -6,8 +6,6 @@ body{
     background-position-x: center;
     background-position-y: 20px;
     background-repeat: no-repeat;
-    position: relative;
-
 }
 h1{
 
@@ -28,22 +26,26 @@ main{
 }
 
 #myForm{
-    position:absolute;
-    width: 200px;
-    left: 9999px;
+    width: 160px;
+    display: none;
     color: white;
     font-weight: bold;
     font-size: 18px;
 }
-#myForm input{
+#myForm input, select{
     margin: 6px;
-    border-radius: 20px;
+    margin-left:0;
+    margin-right: 0;
+    border-radius: 25px;
     border: white solid ;
 }
 
+#myForm select{
+    width: 98%;
+}
+
+
 #start{
-    position: absolute;
-    left: 9990px;
     border-radius: 30px;
     border-width: 2px;
     background: none;
@@ -55,6 +57,7 @@ main{
     margin-top: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin: 0 auto;
 }
 
 #submit{
@@ -73,14 +76,20 @@ main{
 }
 
 footer{
-    position: absolute;
+    margin-top: 160px;
     text-align: center;
-    left: 590px;
-    bottom: -220px;
-    color: white;
+
 }
 footer a{
     color: white;
+}
+
+#madlib{
+    display: none;
+    width: 600px;
+    text-align: justify;
+    color: white;
+    font-size: 18px;
 }
 
 
