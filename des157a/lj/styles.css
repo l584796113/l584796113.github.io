@@ -95,3 +95,11 @@ nav ul li a{
     font-weight: 600;
     font-size: small;
 }
+
+figcaption{
+    text-align: center;
+}
+
+#second{
+    margin-top: 80px;
+}
