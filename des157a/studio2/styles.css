@@ -1,0 +1,102 @@
+body{
+    background: rgb(66,66,66);
+    background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(139,138,138,1) 10%, rgba(196,196,196,1) 20%, rgba(237,237,237,1) 30%, rgba(241,241,241,1) 40%, rgba(255,252,252,1) 50%, rgba(241,241,241,1) 60%, rgba(237,237,237,1) 70%, rgba(196,196,196,1) 80%, rgba(139,138,138,1) 90%, rgba(66,66,66,1) 100%);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+html{
+    height: 100%;
+    -webkit-box-shadow: inset 0px 0px 15px 6px #000000, inset 0px 0px 23px 14px #FFFFFF; 
+    box-shadow: inset 0px 0px 25px 20px #000000, inset 0px 0px 30px 25px #FFFFFF;
+}
+#cars{
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding-top: 14vh;
+    padding-bottom: 5vh;
+}
+.i1{
+    height: 100%;
+    transform:translate(-50%);
+    margin-left: 50%;
+
+}
+.i2{
+    margin-left: 10%;
+    transform:translate(50%);
+    height: 100%;
+    margin-top: 7vh;
+    margin-right: 50%;
+}
+.i3{
+    
+    height: 100%;
+    transform:translate(50%);
+    margin-right: 50%;
+    margin-top: 9vh;
+}
+
+h1{
+    margin-top: 9vh;
+    font-size: 80px;
+
+}
+#h{
+    position: absolute;
+    text-align: center;
+    bottom:5%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+
+#v{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    top:200px;
+    left:30px;
+}
+#v ul li a{
+    font-size: 24px;
+}
+#v ul li{
+    flex: 100%;
+    margin-top: 3px;
+    list-style:lower-roman
+}
+#h ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:0;
+
+}
+#h ul li{
+    width: 25px;
+    padding: 0;
+    font-size: 60px;
+    font-family: helvetica;
+    list-style: none;
+    margin: 0;
+}
+a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selected{
+    color: red;
+}
+
+#arrow{
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+#sto2{
+    margin-top: 0vh;
+}
