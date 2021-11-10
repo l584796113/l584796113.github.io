@@ -25,12 +25,16 @@ h1{
 }
 
 article{
+    display: flex;
+    flex-direction: column;
     border-top: 2px solid;
     padding:50px;
     text-align: justify;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    min-height: 550px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 600px;
+    justify-content: center;
+    align-items: center;
 }
 h2,h3{
     text-align: center;
@@ -103,3 +107,4 @@ figcaption{
 #second{
     margin-top: 80px;
 }
+
