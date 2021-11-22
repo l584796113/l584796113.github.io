@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of PIG</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- <h1>Game of PIG</h1>
+    <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+    <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p> -->
+    <div id="startPage">
+        <h1>Game On!</h1>
+        <button id="start" >START</button>
+        <footer>
+            <a href="https://validator.w3.org/check?uri=https://l584796113.github.io/des157a/studio3">Valid HTML 5</a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+        </footer>
+    </div>
+    <div id="game">
+        <section id="container1">
+            <h1>Player 1</h1>
+            <div id="score1"><h2>Score: 0</h2></div>
+        </section>
+        <section id="control">
+            <div id="top">
+                <button id="roll" >R</br>O</br>L</br>L</button>
+            </div>
+            <section id="dice">
+                <h1></h1>
+            </section>
+            <div id="bottom">
+                <button id="pass" >P</br>A</br>S</br>S</button>
+                <button id="quit" >X</button>
+                <button id="instrucs" >?</button>
+            </div>
+ 
+        </section>
+        <section id="overlay">
+            <h1>Game Instructions</h1>
+            <p>Each player will take turn to roll and they have the option to pass. To win the game, the player must get total points of 100 or all of the dices have the same number. If one of the dice is 1, it will pass to another player automatically. If the sum of three dices are less than or equal to 6, the score the player earned for that turn before passing will be deducted. </p>
+        </section>
+        <section id="container2">
+            <h1>Player 2</h1>
+            <div id="score2"><h2>Score: 0</h2></div>
+        </section>
+
+
+    </div>
+    <div id="restartPage">
+        <h1></h1>
+        <button id="restart" >RESTART</button>
+    </div>
+
+
+
+</body>
+</html>
