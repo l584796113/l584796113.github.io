@@ -102,6 +102,11 @@ button:hover{
     transform: scale(1.02);
     cursor: pointer;
 }
+footer a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
 @font-face {
     font-family: 'Spy Agency Bold Italic Bold Italic';
     font-style: normal;
