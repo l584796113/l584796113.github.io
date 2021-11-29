@@ -1,0 +1,123 @@
+html{
+    background: black;
+    height: 100%;
+    box-shadow: inset 0px 0px 13px 7px #FFFFFF;
+    overflow: hidden;
+}
+body{
+    height: 100%;
+}
+#home{
+    height: 100%;
+    display: none;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    color: white;
+    
+}
+.grid-container {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 700px;
+    height: 700px;
+    margin-top: 50px;
+    text-align: center;
+    /* margin-left: 50%;
+    transform: translate(-100%,0); */
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  label{
+      font-family: 'Spy Agency Condensed Italic Condensed Italic';
+      margin-left: 30px;
+      margin-right: 20px   ;
+  }
+  select{
+      border-radius: 10px;
+      padding-left: 5px;
+  }
+.grid-item{
+    border: solid white 1px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 20px 1px #FFFFFF,inset 0px 0px 40px 1px #FFFFFF;
+    background-color: rgb(92, 92, 92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#start{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    text-shadow: 0 0 7px #fff;
+}
+a{
+    cursor: pointer;
+}
+.grid-container img{
+    max-width: 80%;
+    height: auto;
+}
+#top,#bottom{
+    margin: 0;
+}
+#top{
+    transform: translate(-10%,0);
+}
+#bottom{
+    margin-top: 10px;
+    transform: translate(10%,0);
+}
+#left{
+    margin-bottom: 30px;
+
+    transform: translate(-20%,0);
+}
+#right{
+    margin-top: 30px;
+    transform: translate(20%,0);
+}
+h1{
+    color: white;
+    font-family:'Spy Agency Bold Italic Bold Italic';
+
+}
+#home h1{
+    font-size: 40px;
+    text-shadow: 0 0 7px #fff;
+    margin-bottom: 40px;
+}
+img{
+    transform: translate(0,15%);
+}
+button:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+@font-face {
+    font-family: 'Spy Agency Bold Italic Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Spy Agency Bold Italic Bold Italic'), url('../font/SpyAgencyBoldItalic-axYX5.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Spy Agency Condensed Italic Condensed Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Spy Agency Condensed Italic Condensed Italic'), url('../font/SpyAgencyCondensedItalic-OVGlP.woff') format('woff');
+}
