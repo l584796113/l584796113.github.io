@@ -1,9 +1,10 @@
 html{
     padding: 200px;
     padding-top: 10px;
-
+    
 }
 body{
+    text-align: center;
     text-align: center;
     padding: 150px;
     padding-top: 10px;
@@ -24,4 +25,25 @@ footer{
 }
 footer a{
     margin-left: 10px;
+}
+#images{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    margin-bottom: 5px;
+}
+img{
+    width: auto;
+    height: 100%;
+}
+#usertestContent h2{
+    margin-top: 35px;
+
+}
+#usertestContent p{
+    line-height: 23px;
+    font-size: 16px;
+}
+#usertestContent{
+    padding:25px;
 }
