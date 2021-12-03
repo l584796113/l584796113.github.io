@@ -42,15 +42,7 @@ body{
     margin-right: auto;
     grid-auto-flow: column;
   }
-  label{
-      font-family: 'Spy Agency Condensed Italic Condensed Italic';
-      margin-left: 30px;
-      margin-right: 20px   ;
-  }
-  select{
-      border-radius: 10px;
-      padding-left: 5px;
-  }
+ 
   button{
       background: none;
       border: none;

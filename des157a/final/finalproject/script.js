@@ -54,6 +54,7 @@ document.querySelectorAll("#menu div").forEach(function(item){
 const imgs=document.querySelectorAll('#slideShow img');
 let navLinks;
 let car;
+let counter=1;
 
 
 
@@ -67,7 +68,7 @@ document.querySelectorAll(".grid-item").forEach(function(item){
 });
 
     item.addEventListener('click',function(){
-        let counter=1;
+        counter=1;
 
         document.body.style.background="rgb(66,66,66)";
         document.body.style.background="linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(139,138,138,1) 10%, rgba(196,196,196,1) 20%, rgba(237,237,237,1) 30%, rgba(241,241,241,1) 40%, rgba(255,252,252,1) 50%, rgba(241,241,241,1) 60%, rgba(237,237,237,1) 70%, rgba(196,196,196,1) 80%, rgba(139,138,138,1) 90%, rgba(66,66,66,1) 100%)";
