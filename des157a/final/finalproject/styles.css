@@ -1,6 +1,7 @@
 html{
     height: 100%;
     box-shadow: inset 0px 0px 13px 7px hsl(0, 0%, 100%);
+    overflow: hidden;
 }
 body{
     background: black;
@@ -10,26 +11,36 @@ body{
     height: 100%;
     display: none;
     text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
     color: white;
+    margin: 0;
     
+}
+.return{
+    position: fixed;
+    transform:scale(0.25);
+    top: 5px;
+    left: 5px;
+}
+
+
+
+.return:hover{
+    cursor: pointer;
 }
 .grid-container {
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, 1fr);
     width: 700px;
     height: 700px;
     margin-top: 50px;
     text-align: center;
-    /* margin-left: 50%;
-    transform: translate(-100%,0); */
-    justify-content: space-evenly;
-    justify-items: center;
+    justify-content: center;
     align-content: space-evenly;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    grid-auto-flow: column;
   }
   label{
       font-family: 'Spy Agency Condensed Italic Condensed Italic';
@@ -40,16 +51,21 @@ body{
       border-radius: 10px;
       padding-left: 5px;
   }
+  button{
+      background: none;
+      border: none;
+  }
 .grid-item{
-    border: solid white 1px;
+    border: solid rgb(51, 51, 51) 1px;
     width: 300px;
     height: 300px;
-    box-shadow: 0px 0px 20px 1px #FFFFFF,inset 0px 0px 40px 1px #FFFFFF;
-    background-color: rgb(92, 92, 92);
+    box-shadow: 0px 0px 20px 1px #757575,inset 0px 0px 40px 1px #111111;
+    background-color: rgb(56, 56, 56);
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #start{
     min-height: 100%;
     display: flex;
@@ -70,20 +86,23 @@ a{
     margin: 0;
 }
 #top{
-    transform: translate(-10%,0);
+    transition: all 1s ease-out ;
+    transform: translate(-100%,0);
 }
 #bottom{
     margin-top: 10px;
-    transform: translate(10%,0);
+    transition: all 1s ease-out ;
+    transform: translate(-100%,0);
 }
 #left{
     margin-bottom: 30px;
-
-    transform: translate(-20%,0);
+    transition: all 1s ease-out ;
+    transform: translate(-100%,0);
 }
 #right{
     margin-top: 30px;
-    transform: translate(20%,0);
+    transition: all 1s ease-out ;
+    transform: translate(-100%,0);
 }
 h1{
     color: white;
@@ -94,14 +113,14 @@ h1{
     font-size: 40px;
     text-shadow: 0 0 7px #fff;
     margin-bottom: 40px;
+    margin-top: 60px;
+    font-size: 50px;
 }
 img{
     transform: translate(0,15%);
 }
-button:hover{
-    transform: scale(1.02);
-    cursor: pointer;
-}
+
+
 footer a{
     color: white;
     text-decoration: none;
@@ -118,6 +137,9 @@ footer a{
     overflow: hidden;
     padding-top: 8vh;
     padding-bottom: 2vh;
+}
+#home .grid-container button{
+    position: relative;
 }
 .i1{
     height: 100%;
@@ -140,6 +162,9 @@ footer a{
     margin-top: 9vh;
 }
 
+#r81{
+    margin-top: 50px;
+}
 #slideShow h1{
     margin-top: 9vh;
     font-size: 80px;
@@ -210,20 +235,96 @@ footer{
     top:90%;
     left: 50%;
     transform: translate(-50%,50%);
+    font-family: 'Spy Agency Condensed Italic Condensed Italic';
 }
-#homeSlide{
+#slideHeader h1{
+    color: rgb(70, 70, 70);
     border: none;
     background: none;
     font-size: 60px;
     font-family: 'Spy Agency Gradient Italic Italic' ;
 }
 
-#homeSlide:hover{
+
+
+#menu div{
+    position: relative;
+    color: white;
+    background-position-x: center;
+    background-position-y: center;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 100px;
+    flex-wrap: wrap;
+}
+#menu div::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.4);
+
+}
+#menu div:hover{
+    height: 40%;
     cursor: pointer;
-    transform: scale(1.05);
+}
+#menu div h1{
+    z-index: 1;
+    font-family: 'Spy Agency Outline Italic Outline Italic';
+    font-size: 90px;
+    text-shadow: 0 0 7px #fff;
+    margin: 0;
+
+}
+#menu #menuAll{
+    background-color: rgb(48, 48, 48);
+}
+#lambo{
+    background-image: url(../images/lambo.png);
+
+}
+#challenger{
+    background-image: url(../images/challenger.png);
+    
+}
+#audi{
+    background-image: url(../images/audi.png);
+}
+#menu{
+    display: none;
+    flex-direction: column;
+    height: 98%;
+}
+#home{
+    z-index: -1;
+}
+#home .grid-container button .homeOverlay{
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.8;
+    z-index: -1;
+    text-align: center;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Spy Agency Condensed Italic Condensed Italic';
+    font-size: 24px;
 }
 
-    
+
+ 
 
     @font-face {
     font-family: 'Spy Agency College Italic Italic';

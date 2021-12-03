@@ -1,77 +1,129 @@
 (function () {
 
+    const cars =document.querySelector('#slideShow #cars');
+
+setTimeout(function(){
+    document.querySelector("#left").style.transform="translate(-20%,0)";
+document.querySelector("#top").style.transform="translate(-10%,0)";
+document.querySelector("#bottom").style.transform="translate(10%,0)";
+document.querySelector("#right").style.transform="translate(20%,0)";
+},1000);
 setTimeout(function(){
     document.getElementById("start").style.display='none';
-    document.getElementById("home").style.display='block';
-    alert("Click the car you like");
-},2000);
+    document.getElementById("menu").style.display='flex';
+},4000);
 
-// document.getElementById("essenza").onclick = function () {
-//     document.getElementById("home").style.display='none';
-//     document.getElementById("slideShow").style.display="block";
-// };
+document.getElementById("returnMenu").addEventListener("click",function(){
+    document.getElementById("menu").style.display='flex';
+    document.getElementById("home").style.display='none';
+});
 
-document.getElementById("sto").onclick = function () {
+document.getElementById("returnHome").addEventListener("click",function(){
+    document.getElementById("slideShow").style.display='none';
+    document.getElementById("home").style.display='grid';
+    document.body.style.background="black";
+    document.getElementsByClassName("selected")[0].classList.remove("selected");
 
-};
+});
+
+
+let homeContainer=document.getElementsByClassName("grid-item");
+
+document.querySelectorAll("#menu div").forEach(function(item){
+    item.addEventListener('click',function(){
+        let menuChoice=item.getAttribute("id")
+        for(let i=0;i<homeContainer.length;i++){
+            if(menuChoice=="menuAll"){
+                homeContainer[i].style.display="block";
+            }else{
+                homeContainer[i].style.display="none";
+            }
+            
+            if(homeContainer[i].querySelector("img").getAttribute("alt")==menuChoice){
+                homeContainer[i].style.display="block"
+            }
+        }
+        document.getElementById("menu").style.display='none';
+        document.getElementById("home").style.display='grid';
+
+    });
+})
+
+
 
 const imgs=document.querySelectorAll('#slideShow img');
 let navLinks;
 let car;
-let counter=1;
+
+
+
 document.querySelectorAll(".grid-item").forEach(function(item){
+    item.addEventListener('mouseover', function(event){
+            item.querySelector(".homeOverlay").style.cursor="pointer"
+            item.querySelector(".homeOverlay").style.zIndex="1";
+    });
+    item.addEventListener('mouseout', function(event){
+        item.querySelector(".homeOverlay").style.zIndex="-1";
+});
+
     item.addEventListener('click',function(){
+        let counter=1;
+
         document.body.style.background="rgb(66,66,66)";
         document.body.style.background="linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(139,138,138,1) 10%, rgba(196,196,196,1) 20%, rgba(237,237,237,1) 30%, rgba(241,241,241,1) 40%, rgba(255,252,252,1) 50%, rgba(241,241,241,1) 60%, rgba(237,237,237,1) 70%, rgba(196,196,196,1) 80%, rgba(139,138,138,1) 90%, rgba(66,66,66,1) 100%)";
         document.body.style.textAlign="center";
         document.getElementById("home").style.display='none';
         document.getElementById("slideShow").style.display="block";
         car=item.getAttribute("id");
-        let dots=document.querySelectorAll("#slideShow #h ul li");
+        slideHeader=document.querySelector("#slideHeader h1");
+        switch(car){
+            case "sto": slideHeader.innerHTML="Lamborghini Sto";
+                        break;
+            case "essenza": slideHeader.innerHTML="Lamborghini Essenza";
+                        break;
+            case "r8": slideHeader.innerHTML="Audi R8";
+                        break;         
+            case "srt": slideHeader.innerHTML="Challenger Srt";
+                        break; 
+
+        }
+        dots=document.querySelectorAll("#slideShow #h ul li");
         let list=document.querySelector("#slideShow #h ul");
         let num=0;
-        for(let i=0;i<imgs.length;i++){
+        list.innerHTML = '';
+
+        for(let i=1;i<imgs.length;i++){
             if(imgs[i].getAttribute("alt")==car){
                 imgs[i].style.display="block";
-                num++;
-                if(num>dots.length){
+                    num++;
                     let elem = document.createElement("a");
                     elem.setAttribute("href", `${num}`);
-                    if(num==1){
-                        elem.setAttribute("class","selected")
-                    }
                     elem.innerHTML="·";
                     let elem2=document.createElement("li");
                     elem2.appendChild(elem);
                     list.appendChild(elem2);
-                }
+                
             }else{
                 imgs[i].style.display="none";
             }
         }
         
-        for(let i=num;i<dots.length;i++){
-            list.removeChild(dots.childNodes[i]);
-        }
+        const cars =document.querySelector('#slideShow #cars');
+        cars.scrollLeft=0;
         navLinks=document.querySelectorAll('#slideShow #h ul li a');
-    navLinks.forEach(function(eachLink){
+        navLinks[0].setAttribute("class","selected");
+        navLinks.forEach(function(eachLink){
         eachLink.addEventListener('click',smoothScroll);
     });
-    counter=1
 });});
 
 let leftDis=[];
-const cars =document.querySelector('#slideShow #cars');
 
 let allow=1;
 
 
 cars.addEventListener('wheel', scroll);
 
-// document.getElementById("home").addEventListener('click',function(event){
-//     event.preventDefault();
-//     window.location.href = "../index.html";
-// })
 
 function noscroll(event){
     event.preventDefault();
@@ -135,7 +187,6 @@ function scroll(event){
         navLinks.forEach(function(eachLink){
             eachLink.removeAttribute('class');
         });
-        console.log(dots.length);
         const thisLink=document.querySelector(`#slideShow #h ul li:nth-child(${counter}) a`);
 
         thisLink.className='selected';
@@ -169,9 +220,10 @@ function scroll(event){
 
 function smoothScroll(event){
     event.preventDefault();
-    console.log(car);
     const targetID=event.target.getAttribute('href');
+
     const targetAnchor= document.querySelector(`#${car}${targetID}`);
+    console.log(targetAnchor);
 
     const left=Math.floor(targetAnchor.getBoundingClientRect().left+targetAnchor.width/2-window.innerWidth/2);
     navLinks.forEach(function(eachLink){
